@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.tplinkdns.tadap.mobilecomputingproject.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main"
+        >
+        <action
+            android:id="@+id/action_mainFragment_to_whenSearchFragment"
+            app:destination="@id/whenSearchFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/whenSearchFragment"
+        android:name="com.tplinkdns.tadap.mobilecomputingproject.WhenSearch.WhenSearchFragment"
+        android:label="WhenSearchFragment"
+        tools:layout="@layout/fragment_when_search"
+        >
+        <action
+            android:id="@+id/action_whenSearchFragment_to_afterSearchFragment"
+            app:destination="@id/afterSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/afterSearchFragment"
+        android:name="com.tplinkdns.tadap.mobilecomputingproject.Searching.AfterSearchFragment"
+        android:label="AfterSearchFragment"
+        tools:layout="@layout/fragment_after_search"
+        >
+        <argument
+            android:name="Search"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.tplinkdns.tadap.mobilecomputingproject.Favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+</navigation>

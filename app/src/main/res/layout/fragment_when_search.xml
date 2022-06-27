@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchBar_whenSearching"
+        app:iconifiedByDefault="true"
+        app:closeIcon="@drawable/ic_baseline_close_24"
+
+        android:iconifiedByDefault="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryBackground="@drawable/gray_background"
+        app:queryHint="캠핑장 검색"
+        app:searchIcon="@drawable/ic_baseline_search_24"
+        android:background="@drawable/search_main_background"
+        />
+
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/navigation"
+        android:id="@+id/CurrentPositionImage"
+
+        app:layout_constraintStart_toStartOf="@+id/searchBar_whenSearching"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar_whenSearching"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내 위치"
+
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/CurrentPositionImage"
+        app:layout_constraintStart_toEndOf="@+id/CurrentPositionImage"
+        app:layout_constraintTop_toTopOf="@+id/CurrentPositionImage" />
+
+    <GridView
+        android:id="@+id/gridCountryName"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:numColumns="3"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
